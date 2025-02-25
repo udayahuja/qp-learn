@@ -1,21 +1,22 @@
 public class Customer {
-    String name;
-    CustomerType type;
-    double discount;
+    private String name;
+    private CustomerType type;
 
     public Customer(String name, CustomerType type) {
         this.name = name;
         this.type = type;
-        setDiscount();
     }
 
-    public void setDiscount() {
-        if (type.equals("Regular")) {
-            discount = 0.05;
-        } else if (type.equals("Premium")) {
-            discount = 0.1;
-        } else if (type.equals("VIP")) {
-            discount = 0.2;
-        }
+    public String getName() {
+        return this.name;
     }
+
+    public CustomerType getCustomerType() {
+        return this.type;
+    }
+
+    public double getDiscount() {
+        return this.type.discount;
+    }
+
 }

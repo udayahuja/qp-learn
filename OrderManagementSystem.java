@@ -20,7 +20,7 @@ public class OrderManagementSystem {
     public static void generateInvoice(Order order) {
         double totalPrice = order.getTotal();
         System.out.println("Generating Invoice...");
-        System.out.println("Customer: " + order.customer.name);
+        System.out.println("Customer: " + order.getCustomerName());
         System.out.println("Total: $" + totalPrice);
         System.out.println("Discounted Total: $" + order.getDiscount(totalPrice));
         System.out.println("Items: " + order.items);
